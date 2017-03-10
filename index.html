@@ -1,0 +1,59 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+
+
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>NEW TASK</h4>
+          <input id="task-content"></input>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id="add">ADD</a>
+          <a href="#!" class=" modal-action modal-close waves-effect waves-red btn-flat" id="cancel">CANCEL</a>
+        </div>
+      </div>
+
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <h4>Task Content</h4>
+          <input id="task-content2"></input>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id="done">DONE</a>
+          <a href="#!" class=" modal-action modal-close waves-effect waves-red btn-flat" id="remove">REMOVE</a>
+        </div>
+      </div>
+
+      <ul class="collection" id="list">
+        <li class="collection-header pink-text" id="head"><h4>Task List</h4></li>
+
+        <li class="collection-item">
+            Make a Cake!!!!      
+            <a href="#!" class="secondary-content">
+              <i class="material-icons waves-effect waves-green" id="edit" href="# modal2">edit</i>
+            </a>
+           
+        </li>
+
+      </ul>      
+
+      <a class="btn-floating btn-large waves-effect waves-light red" href="#modal1" id="button"><i class="material-icons">add</i></a>
+
+
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
+    </body>
+  </html>
