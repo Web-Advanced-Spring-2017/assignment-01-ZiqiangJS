@@ -41,6 +41,7 @@
 
       newA.appendChild(newI);
       newLI.appendChild(newA);
+      newA.appendChild(newI);
       list.appendChild(newLI);
 
       document.getElementById('task-content').value='';
@@ -62,7 +63,7 @@
   //     }
   // })
 
-    document.getElementById('remove').addEventListener('click', function(){
+    document.getElementById('remove').addEventListener('click',function(){
         var list= document.getElementById('list');
         var len= list.childNodes.length;
         for (var i=0; i < len;i++) {
@@ -76,6 +77,15 @@
     document.getElementById('edit').addEventListener('click',function(){
         var item= this.parentNode.parentNode;
         var parent= item.parentNode;
-        document.getElementById('task-content2').value= elements[0].parentNode.innerText ;
+        document.getElementById('task-content2').value= parentElements.innerText ;
+    })
+
+    document.getElementById('done').addEventListener('click',function(){
+    	var value= document.getElementById('task-content2').value;
+    	var list= document.getElementById('list');
+    	var val= list.childNodes[0];
+    	val.innerText= value;
+
+    	document.getElementById('task-content2').value='';
     })
 
